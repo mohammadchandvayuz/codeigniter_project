@@ -39,6 +39,9 @@ This project is a user authentication and management system built with **CodeIgn
      - Users have attributes like first name, last name, email, password, profile image, education, and employment details.
      - User images can be cropped and compressed.
 ![image](https://github.com/user-attachments/assets/68a5ee28-8f72-4d15-a43d-7ec0aa3e5622)
+--cropp image functionality
+![image](https://github.com/user-attachments/assets/ebb6ce6b-ccd2-46e6-a557-c7ae500dbcc3)
+
 
 6. **User Education and Employment Details**  
    - User education and employment data are stored in separate tables.
