@@ -11,5 +11,10 @@ class UserModel extends Model {
     public function getLastLogin($user_id) {
         return $this->where('id', $user_id)->first();
     }
+
+    public function getUsers()
+    {
+        return $this->findAll();
+    }
 }
 

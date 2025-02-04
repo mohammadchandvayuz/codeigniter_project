@@ -38,3 +38,6 @@ $routes->group('admin', function($routes) {
     $routes->get('users/view/(:num)', 'Admin\UserController::view/$1');
 });
 
+$routes->get('/projects', 'ProjectController::index');
+$routes->get('/usersdata', 'UserController::index');
+$routes->get('/helperusersdata', 'UserController::show');

@@ -98,7 +98,7 @@ class AdminApiController extends ResourceController {
                 'email' => $this->request->getPost('email'),
                 'password' => password_hash($this->request->getPost('password'), PASSWORD_BCRYPT),
                 'profile_image' => $fileName,
-                'role' => $this->request->getPost('role') ?? 'user'
+                'role' => $this->request->getPost('role') ?? 'customer'
             ];
             $userModel->insert($userData);
             $userId = $userModel->insertID();
