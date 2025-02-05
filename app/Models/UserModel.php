@@ -16,5 +16,10 @@ class UserModel extends Model {
     {
         return $this->findAll();
     }
+
+
+    public function getMessage(){
+        return 'hello';
+    }
 }
 
