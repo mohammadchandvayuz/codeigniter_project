@@ -17,7 +17,6 @@ class UserController extends Controller
 
     public function show()
     {
-        helper('user'); 
         $data['users'] = get_users();
 
         return view('users_view_with_helper', $data);
