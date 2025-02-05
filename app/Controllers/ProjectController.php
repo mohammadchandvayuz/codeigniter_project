@@ -13,4 +13,9 @@ class ProjectController extends Controller
 
         return view('projects_view', $data);
     }
+
+    public function getMessage()
+    {
+        return 'Hello';
+    }
 }
