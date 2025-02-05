@@ -77,7 +77,7 @@ class Database extends Config
      *
      * @var array<string, mixed>
      */
-    public array $second_db = [
+    public array $third_db = [
         'DSN'      => '',
         'hostname' => 'localhost',
         'username' => 'root',
@@ -102,7 +102,7 @@ class Database extends Config
      *
      * @var array<string, mixed>
      */
-    public array $second_db = [
+    public array $fourth_db = [
         'DSN'      => '',
         'hostname' => 'localhost',
         'username' => 'root',
