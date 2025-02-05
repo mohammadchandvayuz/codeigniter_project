@@ -45,4 +45,8 @@ class DashboardController extends Controller {
 
         return view('user/dashboard', ['user' => $user]);
     }
+
+    public function userMessage() {
+        return 'Hello User';
+    }
 }
