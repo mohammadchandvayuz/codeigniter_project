@@ -21,11 +21,9 @@ class Auth extends Controller {
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
 
-        // Check if user exists
         $user = $userModel->where('email', $email)->first();
 
         if ($user && password_verify($password, $user['password'])) {
-            // Store user data in session
             session()->set([
                 'user_id' => $user['id'],
                 'email' => $user['email'],
@@ -50,16 +48,13 @@ class Auth extends Controller {
     }
 
     public function store() {
-        //die('askdhajsk');
         $userModel = new UserModel();
         $educationModel = new UserEducationModel();
         $employmentModel = new UserEmploymentModel();
 
-        // Handle file upload
         $file = $this->request->getFile('profile_image');
         $fileName = uploadFile($file);
 
-        // Insert User Data
         $userData = [
             'first_name' => $this->request->getPost('first_name'),
             'last_name' => $this->request->getPost('last_name'),
@@ -72,7 +67,6 @@ class Auth extends Controller {
         $userModel->insert($userData);
         $userId = $userModel->insertID();
 
-        // Insert Education Details
         $educationModel->insert([
             'user_id' => $userId,
             'degree' => $this->request->getPost('degree'),
@@ -80,7 +74,6 @@ class Auth extends Controller {
             'passing_year' => $this->request->getPost('passing_year')
         ]);
 
-        // Insert Employment Details
         $employmentModel->insert([
             'user_id' => $userId,
             'company_name' => $this->request->getPost('company_name'),
