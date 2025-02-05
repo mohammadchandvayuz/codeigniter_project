@@ -73,6 +73,56 @@ class Database extends Config
     ];
 
     /**
+     * The Third database connection.
+     *
+     * @var array<string, mixed>
+     */
+    public array $second_db = [
+        'DSN'      => '',
+        'hostname' => 'localhost',
+        'username' => 'root',
+        'password' => '',
+        'database' => 'codeigniter3',
+        'DBDriver' => 'MySQLi',
+        'DBPrefix' => '',
+        'pConnect' => false,
+        'DBDebug'  => true,
+        'charset'  => 'utf8',
+        'DBCollat' => 'utf8_general_ci',
+        'swapPre'  => '',
+        'encrypt'  => false,
+        'compress' => false,
+        'strictOn' => false,
+        'failover' => [],
+        'port'    => 3306,
+    ];
+
+    /**
+     * The fourth database connection.
+     *
+     * @var array<string, mixed>
+     */
+    public array $second_db = [
+        'DSN'      => '',
+        'hostname' => 'localhost',
+        'username' => 'root',
+        'password' => '',
+        'database' => 'codeigniter4',
+        'DBDriver' => 'MySQLi',
+        'DBPrefix' => '',
+        'pConnect' => false,
+        'DBDebug'  => true,
+        'charset'  => 'utf8',
+        'DBCollat' => 'utf8_general_ci',
+        'swapPre'  => '',
+        'encrypt'  => false,
+        'compress' => false,
+        'strictOn' => false,
+        'failover' => [],
+        'port'    => 3306,
+    ];
+
+    /**
      * This database connection is used when
      * running PHPUnit database tests.
      *
