@@ -22,4 +22,15 @@ class UserController extends Controller
 
         return view('users_view_with_helper', $data);
     }
+
+    public function staticData(){
+
+        $data = [
+            'data1' => 'value1',
+            'data2' => 'value2',
+            'data3' => 'value3',
+            'data4' => 'value4',
+            'data5' => 'value5',
+        ];
+    }
 }
