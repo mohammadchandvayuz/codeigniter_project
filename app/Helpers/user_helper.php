@@ -11,8 +11,32 @@ if (!function_exists('get_users')) {
 }
 
 if (!function_exists('get_static_user_data')) {
-    function get_static_user_data()
-    {
+    function get_static_user_data() {
+        return [
+            [
+                'id' => 1,
+                'name' => 'John Doe',
+                'email' => 'john.doe@example.com',
+                'role' => 'admin'
+            ],
+            [
+                'id' => 2,
+                'name' => 'Jane Smith',
+                'email' => 'jane.smith@example.com',
+                'role' => 'customer'
+            ],
+            [
+                'id' => 3,
+                'name' => 'Mike Johnson',
+                'email' => 'mike.johnson@example.com',
+                'role' => 'customer'
+            ]
+        ];
+    }
+}
+
+if (!function_exists('get_users_static_data')) {
+    function get_users_static_data() {
         return [
             [
                 'id' => 1,

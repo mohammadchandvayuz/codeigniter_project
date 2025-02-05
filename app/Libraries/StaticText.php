@@ -12,6 +12,14 @@ class StaticText {
             'edit_user' => 'Edit User',
             'dashboard' => 'Dashboard',
             'admin_dashboard' => 'Admin Dashboard',
+            'settings' => 'Settings',
+            'profile' => 'User Profile',
+            'login' => 'Login',
+            'register' => 'Register',
+            'forgot_password' => 'Forgot Password',
+            'order_list' => 'Order List',
+            'order_details' => 'Order Details',
+            'reports' => 'Reports & Analytics'
         ];
 
         return isset($titles[$page]) ? $titles[$page] : 'Default Title';

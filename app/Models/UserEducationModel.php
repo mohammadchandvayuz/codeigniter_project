@@ -34,4 +34,7 @@ class UserEducationModel extends Model {
             ]
         ];
     }
-}
+
+    public function getEducationByUserId($userId) {
+        return $this->where('user_id', $userId)->findAll();
+    }

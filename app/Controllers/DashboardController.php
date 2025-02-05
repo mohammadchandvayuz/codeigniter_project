@@ -18,7 +18,6 @@ class DashboardController extends Controller {
         }
     }
 
-    // Admin Dashboard
     public function adminDashboard() {
         if (!session()->get('logged_in') || session()->get('role') !== 'admin') {
             return redirect()->to('/login');
@@ -33,13 +32,11 @@ class DashboardController extends Controller {
         return view('admin/dashboard', $data);
     }
 
-    // User Dashboard
     public function userDashboard() {
         if (!session()->get('logged_in') || session()->get('role') !== 'customer') {
             return redirect()->to('/login');
         }
 
-        // Fetch user info (e.g., welcome message, last login)
         $userModel = new UserModel();
         $user = $userModel->find(session()->get('user_id'));
 
