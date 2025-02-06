@@ -41,3 +41,9 @@ $routes->group('admin', function($routes) {
 $routes->get('/projects', 'ProjectController::index');
 $routes->get('/usersdata', 'UserController::index');
 $routes->get('/helperusersdata', 'UserController::show');
+
+$routes->group('api/user', function ($routes) {
+    $routes->post('login', 'Api\AuthController::login');
+    $routes->get('data', 'Api\AuthController::getUserData');
+    $routes->get('delete/(:num)', 'Api\AuthController::deleteUser/$1');
+});

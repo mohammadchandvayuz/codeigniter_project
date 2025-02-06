@@ -95,5 +95,5 @@ class Autoload extends AutoloadConfig
      *
      * @var list<string>
      */
-    public $helpers = ['fileupload', 'user'];
+    public $helpers = ['fileupload', 'user', 'jwt'];
 }
